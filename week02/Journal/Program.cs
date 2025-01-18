@@ -34,6 +34,8 @@ class Program
 
                 case "2":
                    
+                    journal.DisplayAll();
+
                     break;
 
                 case "3":
