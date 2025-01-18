@@ -26,11 +26,16 @@ class Program
                 case "1":
                     string entryPrompt = prompt.GetPrompt();
 
+                    Console.WriteLine("Before we begin, lets track a few things:");
+                    Console.WriteLine("Enter your mood (1-10): ");
+                    string mood = Console.ReadLine();
+                    Console.WriteLine("Enter your energy levels (1-10): ");
+                    string energy = Console.ReadLine();
                     Console.WriteLine($"Prompt: {entryPrompt}");
                     Console.WriteLine($"Write your entry here: ");
                     
                     string newEntry = Console.ReadLine();
-                    journal.AddEntry(date: DateTime.Now.ToString(), entryPrompt, newEntry); 
+                    journal.AddEntry(date: DateTime.Now.ToString(), mood, energy, entryPrompt, newEntry); 
                     break;
 
                 case "2":

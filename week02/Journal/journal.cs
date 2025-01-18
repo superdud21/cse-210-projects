@@ -5,9 +5,9 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    public void AddEntry(string date, string prompt, string newEntry)
+    public void AddEntry(string date, string mood, string energy, string prompt, string newEntry)
     {
-        _entries.Add(new Entry {_date = date, _promptText = prompt, _entryText = newEntry});
+        _entries.Add(new Entry {_date = date, _mood = mood, _energy = energy, _promptText = prompt, _entryText = newEntry});
     }
 
     public void DisplayAll()
@@ -22,12 +22,13 @@ public class Journal
     {
         Console.WriteLine("Enter a filepath: ");
         string filename = Console.ReadLine();
+        Console.WriteLine("\n");
 
         using (StreamWriter journalFile = new StreamWriter(filename))
         {
             foreach (Entry entry in _entries)
             {
-                journalFile.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+                journalFile.WriteLine($"{entry._date}|{entry._mood}|{entry._energy}|{entry._promptText}|{entry._entryText}");
             }
         }
 
@@ -37,6 +38,7 @@ public class Journal
     {
         Console.WriteLine("Enter a filepath: ");
         string filename = Console.ReadLine();
+        Console.WriteLine("\n");
 
         if (File.Exists(filename))
         {
@@ -45,7 +47,7 @@ public class Journal
             foreach (string entry in entries)
             {
                 string[] parts = entry.Split('|');
-                _entries.Add(new Entry {_date = parts[0], _promptText = parts[1], _entryText = parts[2]});
+                _entries.Add(new Entry {_date = parts[0], _mood = parts[1], _energy = parts[2], _promptText = parts[3], _entryText = parts[4]});
             }
 
         } else {
