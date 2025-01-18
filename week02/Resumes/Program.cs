@@ -10,6 +10,6 @@ class Program
         job1._startYear = 2004;
         job1._endYear = 2020;
 
-        Console.WriteLine(job1._company);
+        job1.Display();
     }
 }
