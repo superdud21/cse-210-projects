@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        Journal journal = new Journal();
+        Prompts prompt = new Prompts();
+
         bool running = true;
         while (running)
         {
@@ -16,9 +20,6 @@ class Program
             Console.WriteLine("5. Quit");
 
             string selection = Console.ReadLine();
-
-            Journal journal = new Journal();
-            Prompts prompt = new Prompts();
 
             switch (selection)
             {
