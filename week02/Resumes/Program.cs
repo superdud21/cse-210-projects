@@ -10,12 +10,10 @@ class Program
         job1._startYear = 2004;
         job1._endYear = 2020;
 
-        job1.Display();
-
         Resume resume1 = new Resume();
+        resume1._employeeName = "Bob Bobenstein";
         resume1._jobs.Add(job1);
 
-        Console.WriteLine(resume1._jobs[0]._jobTitle);
-    
+        resume1.Display();    
     }
 }
