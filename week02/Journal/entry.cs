@@ -8,7 +8,9 @@ public class Entry
 
     public void Display()
     {
-        
+        Console.WriteLine(_date);
+        Console.WriteLine($"Prompt: {_promptText}");
+        Console.WriteLine($"Logged Entry: {_entryText}");
     }
 
 }
