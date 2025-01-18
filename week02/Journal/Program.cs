@@ -41,6 +41,8 @@ class Program
 
                 case "3":
 
+                    journal.LoadFromFile();
+
                     break;
 
                 case "4":

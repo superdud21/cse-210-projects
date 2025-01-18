@@ -35,8 +35,20 @@ public class Journal
 
     public void LoadFromFile()
     {
+        Console.WriteLine("Enter a filepath: ");
+        string filename = Console.ReadLine();
 
+        if (File.Exists(filename))
+        {
+            string[] entries = File.ReadAllLines(filename);
+            foreach (string entry in entries)
+            {
+                string[] parts = entry.Split(',');
+                _entries.Add(new Entry {_date = parts[0], _promptText = parts[1], _entryText = parts[2]});
+            }
+
+        } else {
+            Console.WriteLine($"No Journal File exists at: {filename}");
+        }
     }
-    
-
 }
