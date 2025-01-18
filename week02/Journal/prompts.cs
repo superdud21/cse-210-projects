@@ -7,14 +7,12 @@ public class Prompts
 
     public string GetPrompt()
     {
-
         if (File.Exists(promptsFile))
         {
             _prompts = File.ReadAllLines(promptsFile).ToList();
         } else {
             Console.WriteLine("No Prompts File Exists.");
         }
-
 
         Random random = new Random();
         int randomIndex = random.Next(_prompts.Count);
