@@ -1,5 +1,7 @@
 using System;
 
+
+// In an attempt to be creative, I also prompt for mood and energy levels to track and display for the user. 
 class Program
 {
     static void Main(string[] args)
