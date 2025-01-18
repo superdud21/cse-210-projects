@@ -17,11 +17,18 @@ class Program
 
             string selection = Console.ReadLine();
 
+            Journal journal = new Journal();
+            Prompts prompt = new Prompts();
+
             switch (selection)
             {
                 case "1":
-                    Prompts prompt = new Prompts();
-                    Console.WriteLine(prompt.GetPrompt());
+                    string entryPrompt = prompt.GetPrompt();
+
+                    Console.WriteLine($"Prompt: {entryPrompt}");
+                    Console.WriteLine($"Write your entry here: ");
+                    
+                    string newEntry = Console.ReadLine();
 
                     break;
 
