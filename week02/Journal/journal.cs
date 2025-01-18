@@ -2,11 +2,11 @@ using System;
 
 public class Journal
 {
-    public List<string> _entries;
+    public List<Entry> _entries;
 
-    public void AddEntry()
+    public void AddEntry(string date, string prompt, string newEntry)
     {
-
+        _entries.Add(new Entry {_date = date, _promptText = prompt, _entryText = newEntry});
     }
 
     public void DisplayAll()
@@ -21,7 +21,7 @@ public class Journal
 
     public void LoadFromFile()
     {
-        
+
     }
     
 

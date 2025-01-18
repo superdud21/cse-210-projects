@@ -29,7 +29,7 @@ class Program
                     Console.WriteLine($"Write your entry here: ");
                     
                     string newEntry = Console.ReadLine();
-
+                    journal.AddEntry(date: DateTime.Now.ToString(), entryPrompt, newEntry); 
                     break;
 
                 case "2":
