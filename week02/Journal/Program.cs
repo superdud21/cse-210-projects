@@ -20,6 +20,8 @@ class Program
             switch (selection)
             {
                 case "1":
+                    Prompts prompt = new Prompts();
+                    Console.WriteLine(prompt.GetPrompt());
 
                     break;
 
@@ -41,7 +43,7 @@ class Program
                     break;
 
                 default:
-                
+
                     break;
             }
         }
