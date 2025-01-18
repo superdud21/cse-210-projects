@@ -1,4 +1,5 @@
 using System;
+using System.Formats.Asn1;
 
 public class Journal
 {
@@ -19,6 +20,16 @@ public class Journal
 
     public void SaveToFile()
     {
+        Console.WriteLine("Enter a filepath: ");
+        string filename = Console.ReadLine();
+
+        using (StreamWriter journalFile = new StreamWriter(filename))
+        {
+            foreach (Entry entry in _entries)
+            {
+                journalFile.WriteLine($"{entry._date}, {entry._promptText}, {entry._entryText}");
+            }
+        }
 
     }
 

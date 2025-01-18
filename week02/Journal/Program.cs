@@ -45,6 +45,8 @@ class Program
 
                 case "4":
 
+                    journal.SaveToFile();
+
                     break;
 
                 case "5":

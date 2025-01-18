@@ -11,6 +11,7 @@ public class Entry
         Console.WriteLine(_date);
         Console.WriteLine($"Prompt: {_promptText}");
         Console.WriteLine($"Logged Entry: {_entryText}");
+        Console.WriteLine("\n");
     }
 
 }
