@@ -24,5 +24,14 @@ public class Fraction
         _bottom = bottomNumber;
     }
 
+    public string GetFractionString()
+    {
+
+    }
+
+    public double GetDecimalValue()
+    {
+        
+    }
 
 }
