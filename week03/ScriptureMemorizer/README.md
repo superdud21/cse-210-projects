@@ -24,7 +24,6 @@ Classes:
 - GetLetterCount()
 
 
-
 # Class: Reference
 ## Attributes:
 - _book: string
