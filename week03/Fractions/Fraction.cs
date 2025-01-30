@@ -31,7 +31,26 @@ public class Fraction
 
     public double GetDecimalValue()
     {
-        
+
     }
 
+    public void GetTop()
+    {
+
+    }
+    
+    public void SetTop(int topNumber)
+    {
+
+    }
+
+    public void GetBottom()
+    {
+
+    }
+
+    public void SetBottom(int bottomNumber)
+    {
+
+    }
 }
