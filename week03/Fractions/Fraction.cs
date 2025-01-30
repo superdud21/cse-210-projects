@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics.Contracts;
+using System.Runtime.InteropServices;
 
 public class Fraction
 {
@@ -26,31 +27,33 @@ public class Fraction
 
     public string GetFractionString()
     {
-
+        string fractionString = $"{_top}/{_bottom}";
+        return fractionString;
     }
 
     public double GetDecimalValue()
     {
-
+        double fractionDecimal = (double)_top/(double)_bottom;
+        return fractionDecimal;
     }
 
-    public void GetTop()
+    public int GetTop()
     {
-
+        return _top;
     }
     
     public void SetTop(int topNumber)
     {
-
+        _top = topNumber;
     }
 
-    public void GetBottom()
+    public int GetBottom()
     {
-
+        return _bottom;
     }
 
     public void SetBottom(int bottomNumber)
     {
-
+        _bottom = bottomNumber;
     }
 }

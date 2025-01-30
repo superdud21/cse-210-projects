@@ -1,5 +1,7 @@
 # W04 Team Activity - Online Ordering
 
+Each order will contain a list of products, containing the proper information. As well as a a customer object which inherits an address object. 
+
 # Class: Order
 ## Attributes:
 - List<Prodcut>
