@@ -8,17 +8,20 @@ public class Fraction
 
     public Fraction()
     {
-        
+        _top = 1;
+        _bottom = 1;
     }
 
     public Fraction(int topNumber)
     {
-
+        _top = topNumber;
+        _bottom = 1;
     }
 
     public Fraction(int topNumber, int bottomNumber)
     {
-
+        _top = topNumber;
+        _bottom = bottomNumber;
     }
 
 
