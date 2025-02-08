@@ -11,7 +11,22 @@ public class Scripture
     
     public void HideWords()
     {
+        List<Word> visibleWords = new List<Word>();
 
+        foreach(Word word in _words)
+        {
+            if (!word.IsHidden())
+            {
+                visibleWords.Add(word);
+            }
+        }
+
+        if (visibleWords.Count > 0)
+        {
+            Random random = new Random();
+            int randomWordIndex = random.Next(visibleWords.Count);
+            visibleWords[randomWordIndex].Hide();
+        }
     }
 
     public bool IsCompletelyHidden() 
