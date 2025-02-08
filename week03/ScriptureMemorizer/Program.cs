@@ -15,6 +15,29 @@ class Program
             string scriptureReference = sections[0];
             string scriptureText = sections[1];
 
+            string[] referenceParts = scriptureReference.Split(' '); 
+            string book = referenceParts[0];
+            string[] chapterVerseParts = referenceParts[1].Split(':');
+            int chapter = int.Parse(chapterVerseParts[0]);
+            int verse, endVerse;
+
+            Reference reference;
+            if (chapterVerseParts[1].Contains("-"))
+            {
+                string[] verseParts = chapterVerseParts[1].Split('-');
+                verse = int.Parse(verseParts[0]);
+                endVerse = int.Parse(verseParts[1]);
+                reference = new Reference(book, chapter, verse, endVerse);
+            }
+            else
+            {
+                verse = int.Parse(chapterVerseParts[1]);
+                reference = new Reference(book, chapter, verse);
+            }
+
+            Scripture scripture = new Scripture(reference, scriptureText);
+            Console.WriteLine(scripture.GetDisplayText());
+
             Console.WriteLine("Press Enter to hide words, or type 'quit' to exit.");
 
             while (true)
