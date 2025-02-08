@@ -4,8 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Scripture> _scriptures = new List<Scripture>();
-
         if (File.Exists("scriptures.txt"))
         {
             string[] scriptures = File.ReadAllLines("scriptures.txt");
