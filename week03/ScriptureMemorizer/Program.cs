@@ -38,7 +38,7 @@ class Program
             Scripture scripture = new Scripture(reference, scriptureText);
             Console.WriteLine(scripture.GetDisplayText());
 
-            Console.WriteLine("Press Enter to hide words, or type 'quit' to exit.");
+            Console.WriteLine("\nPress Enter to hide words, or type 'quit' to exit.");
 
             while (true)
             {
@@ -52,6 +52,8 @@ class Program
                 Console.Clear();
 
                 Console.WriteLine(scripture.GetDisplayText());
+
+                Console.WriteLine("\nPress Enter to hide words, or type 'quit' to exit.");
 
                 if (scripture.IsCompletelyHidden())
                 {

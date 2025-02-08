@@ -21,14 +21,26 @@ public class Scripture
             }
         }
 
-        if (visibleWords.Count > 0)
+        if (visibleWords.Count == 0)
         {
-            Random random = new Random();
-            int randomWordIndex = random.Next(visibleWords.Count);
-            visibleWords[randomWordIndex].Hide();
+            return;
+        }
+
+        Random random = new Random();
+        int numberOfWordsToHide = random.Next(1, 5);
+
+        if (numberOfWordsToHide > visibleWords.Count)
+        {
+            numberOfWordsToHide = visibleWords.Count;
+        }
+
+        for (int i = 0; i < numberOfWordsToHide; i++)
+        {
+            int randomIndex = random.Next(visibleWords.Count);
+            visibleWords[randomIndex].Hide();
+            visibleWords.RemoveAt(randomIndex);
         }
     }
-
     public bool IsCompletelyHidden() 
     {
         foreach (Word word in _words)
