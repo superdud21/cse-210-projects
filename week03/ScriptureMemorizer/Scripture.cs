@@ -6,7 +6,7 @@ public class Scripture
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
-        _words = text.Split(' ').Select(word => Word(word)).ToList();
+        _words = text.Split(' ').Select(word => new Word(word)).ToList();
     }
     
     public void HideWords()
