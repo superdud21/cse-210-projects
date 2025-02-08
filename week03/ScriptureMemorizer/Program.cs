@@ -47,6 +47,17 @@ class Program
                 {
                     break;
                 }
+                scripture.HideWords();
+
+                Console.Clear();
+
+                Console.WriteLine(scripture.GetDisplayText());
+
+                if (scripture.IsCompletelyHidden())
+                {
+                    Console.WriteLine("All words are hidden. Program has ended.");
+                    break;
+                }
             }
         } else {
             Console.WriteLine("No Scripture File Exists");
