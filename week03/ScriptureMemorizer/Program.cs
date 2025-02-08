@@ -1,5 +1,6 @@
 using System;
 
+//Attempted to show creativity by pulling a random scripture from a text file to display to the user. 
 class Program
 {
     static void Main(string[] args)
@@ -34,6 +35,8 @@ class Program
                 verse = int.Parse(chapterVerseParts[1]);
                 reference = new Reference(book, chapter, verse);
             }
+
+            Console.Clear();
 
             Scripture scripture = new Scripture(reference, scriptureText);
             Console.WriteLine(scripture.GetDisplayText());
