@@ -8,9 +8,9 @@ class Program
         {
             string[] scriptures = File.ReadAllLines("scriptures.txt");
 
-            foreach (string entry in scriptures)
+            while (true)
             {
-                Console.WriteLine(entry);
+
             }
         } else {
             Console.WriteLine("No Scripture File Exists");
