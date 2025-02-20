@@ -1,4 +1,4 @@
-class ListingActivity
+class ListingActivity : Activity
 {
     private static readonly List<string> Prompts = new()
     {
@@ -8,9 +8,9 @@ class ListingActivity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     };
-    
-    public ListingActivity() : base("Listing", "This activity will help you reflect on the good things in your life by listing as many things as you can in a certain area.") {}
-    
+
+    public ListingActivity() : base("Listing", "This activity will help you reflect on the good things in your life by listing as many things as you can in a certain area.") { }
+
     public void Run()
     {
         DisplayIntro();

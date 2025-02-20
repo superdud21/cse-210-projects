@@ -1,15 +1,15 @@
 class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
-    
+    protected string _name;
+    protected string _description;
+    protected int _duration;
+
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
     }
-    
+
     public void DisplayIntro()
     {
         Console.WriteLine($"\n{_name} Activity");
@@ -19,14 +19,14 @@ class Activity
         Console.WriteLine("Prepare to begin...");
         ShowLoading(3);
     }
-    
+
     public void DisplayOutro()
     {
         Console.WriteLine("\nGreat job!");
         Console.WriteLine($"You have completed the {_name} activity for {_duration} seconds.");
         ShowLoading(3);
     }
-    
+
     public void ShowLoading(int seconds)
     {
         for (int i = 0; i < seconds; i++)
