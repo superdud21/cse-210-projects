@@ -9,7 +9,7 @@ class GoalManager
         LoadGoals();
         while (true)
         {
-            Console.WriteLine("\nMenu: 1) Create Goal  2) List Goals  3) Record Event  4) Save  5) Exit");
+            Console.WriteLine("\nMenu:\n1) Create Goal\n2) List Goals\n3) Record Event\n4) Save\n5) Exit");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -46,7 +46,7 @@ class GoalManager
 
     public void CreateGoal()
     {
-        Console.WriteLine("Choose goal type: 1) Simple  2) Eternal  3) Checklist");
+        Console.WriteLine("Choose goal type: 1) Simple \n2) Eternal \n3) Checklist");
         string choice = Console.ReadLine();
 
         Console.Write("Enter goal name: ");

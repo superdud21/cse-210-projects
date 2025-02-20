@@ -1,0 +1,2 @@
+0
+SimpleGoal|Walk|Walk twice a day|10|False
